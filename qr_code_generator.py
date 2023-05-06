@@ -12,4 +12,5 @@ def generate_qrcode(text):
     img = qr.make_image(fill_color = "orange", back_color = "white") #choose a color
     img.save("qrimage.png")#name can be changed 
 
-generate_qrcode("https://www.linkedin.com/in/topcunht/")#enter the target link 
+url = input("Enter your URL: ")
+generate_qrcode(url)#enter the target link 
