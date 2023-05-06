@@ -4,12 +4,12 @@ def generate_qrcode(text):
     qr = qrcode.QRCode(
         version=1,
         error_correction = qrcode.constants.ERROR_CORRECT_L,
-        box_size=10,
+        box_size=10, #you can change the size
         border=4
     )
     qr.add_data(text)
     qr.make(fit=True)
-    img = qr.make_image(fill_color = "orange", back_color = "white")
-    img.save("qrimage.png")
+    img = qr.make_image(fill_color = "orange", back_color = "white") #choose a color
+    img.save("qrimage.png")#name can be changed 
 
-generate_qrcode("https://www.linkedin.com/in/topcunht/")
+generate_qrcode("https://www.linkedin.com/in/topcunht/")#enter the target link 
